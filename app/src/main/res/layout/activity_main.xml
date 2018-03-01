@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/playground"
+
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_margin="0dp"
+
+            android:background="@drawable/cartrack"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            android:addStatesFromChildren="true"
+            android:weightSum="0">
+
+
+            <RelativeLayout
+                android:layout_width="220dp"
+                android:layout_height="525dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/image"
+
+                    android:layout_width="20dp"
+                    android:layout_height="25dp"
+                    android:layout_above="@+id/image_sejal"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:layout_marginStart="12dp"
+                    android:layout_toEndOf="@+id/image_sejal"
+                    android:layout_toRightOf="@+id/image_sejal"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/car_image" />
+
+                <ImageView
+                    android:id="@+id/image_suhas"
+
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="37dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginStart="15dp"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/car_image_suhas" />
+
+                <ImageView
+                    android:id="@+id/image_sejal"
+
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_above="@+id/image_suhas"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="41dp"
+                    android:layout_toEndOf="@+id/image_suhas"
+                    android:layout_toRightOf="@+id/image_suhas"
+                    android:scaleType="fitCenter"
+                    app:srcCompat="@mipmap/car_image_sejal" />
+
+
+            </RelativeLayout>
+
+            <!--<ImageView-->
+            <!--android:id="@+id/image"-->
+
+            <!--android:layout_width="80dp"-->
+            <!--android:layout_height="78dp"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:background="@null"-->
+            <!--android:scaleType="fitCenter"-->
+            <!--android:src="@mipmap/ic_launcher"-->
+            <!--app:srcCompat="@drawable/car_image" />-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.84">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="end"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/bDecelerateToVeryLowSpeed"
+                android:layout_width="150dp"
+                android:layout_height="@android:dimen/app_icon_size"
+                android:text="Brake"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/bAccelerateInterpolator"
+                android:layout_width="151dp"
+                android:layout_height="wrap_content"
+                android:text="Accelerator"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/bStart"
+                android:layout_width="148dp"
+                android:layout_height="wrap_content"
+                android:text="Start"
+                android:textAllCaps="false" />
+
+            <TextView
+                android:id="@+id/textViewSteeringBlockAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Steering_in_SteeringBlock" />
+
+            <TextView
+                android:id="@+id/textViewmCurrAngle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SteeringAngleinAcclerator" />
+
+            <TextView
+                android:id="@+id/textViewAcceleration"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Acceleration" />
+
+            <TextView
+                android:id="@+id/textViewVelocity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Velocity" />
+
+            <TextView
+                android:id="@+id/textViewRpm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="R.P.M" />
+
+            <TextView
+                android:id="@+id/textViewXCoordinate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="X-Coordinate" />
+
+            <TextView
+                android:id="@+id/textViewYCoordinate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Y-Coordinate" />
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/steering_wheel" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+
+
+
+
